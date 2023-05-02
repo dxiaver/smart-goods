@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>数据展示</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>仓库数据</h1>
+  <h2>Maker-卢世俊</h2>
+
+  <div id="data-container">
+    <table id="data-table">
+      <thead>
+        <tr>
+          <th>数据流名称</th>
+          <th>最新数值</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- 表格数据将在此处动态添加 -->
+      </tbody>
+    </table>
+  </div>
+
+  <div id="status-container">
+    <div class="status-box">
+      <div class="status-label">风扇</div>
+      <img src="image/fan-off.png" alt="Fan Icon" class="status-icon" data-on="image/fan-on.gif" data-off="image/fan-off.png" id="fan-icon">
+      <div class="status-text fan-status" id="fan-status">关闭</div>
+      <button class="control-button toggle-fan" id="fan-btn">控制</button>
+    </div>
+    <div class="status-box">
+      <div class="status-label">门锁</div>
+      <img src="image/lock-off.png" alt="Lock Icon" class="status-icon lock off" data-on="image/lock-open.png" data-off="image/lock-off.png" id="lock-icon">
+      <div class="status-text lock-status" id="lock-status">关闭</div>
+      <button class="control-button toggle-lock" id="door-btn">控制</button>
+    </div>
+    <div class="status-box">
+      <div class="status-label">加湿器</div>
+      <img src="image/humidifier-off.png" alt="Humidifier Icon" class="status-icon" data-on="image/humidifier-on.png" data-off="image/humidifier-off.png" id="humidifier-icon">
+      <div class="status-text humidifier-status" id="humidifier-status">关闭</div>
+      <button class="control-button toggle-humidifier" id="humidifier-btn">控制</button>
+    </div>
+  </div>
+  
+  
+
+  <div id="temperature-container">
+    <canvas id="temperature-chart"></canvas>
+  </div>
+
+  <div id="humidity-container">
+    <canvas id="humidity-chart"></canvas>
+  </div>
+
+  <div id="environment-container">
+    <canvas id="environment-chart"></canvas>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="app.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,228 @@
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    background-color: #d9eaf3;
+}
+
+h1 {
+    font-size: 44px;
+    font-weight: bold;
+    font-family: SimSun;
+    text-align: center;
+    margin: 20px 0;
+    z-index: 1;
+}
+
+h2 {
+  font-size: 30px;
+  font-weight: bold;
+  font-family: SimSun;
+  text-align: center;
+  margin: 20px 0;
+  position: absolute;
+  top: 10px;
+  right: 400px;
+  z-index: 1;
+}
+
+#data-container {
+    width: 300px;
+    height: 250px;
+    position: absolute;
+    top: 100px;
+    right: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+    z-index: 0;
+
+    background-color: #f2f2f2; /* 将此行添加到将温度折线图容器的背景颜色设置为灰色 */
+    padding: 20px; /* 将此行添加到将温度折线图容器的内边距设置为20像素 */
+    border-radius: 10px; /* 将此行添加到将温度折线图容器的边角设置为5像素的圆角 */
+  }
+
+
+  #status-container {
+    width: 450px;
+    height: 250px;
+    position: absolute;
+    left: 600px;
+    top: 100px;
+    background-color: #f2f2f2; 
+    padding: 20px; 
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .status-box {
+    flex-basis: calc(100% / 3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .status-label {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .status-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+    cursor: pointer;
+  }
+  
+  .status-text {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .control-button {
+    width: 80px;
+    height: 30px;
+    background-color: #a1e987;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .fan-status {
+    color: green;
+  }
+  
+  .lock-status {
+    color: green;
+  }
+
+  .humidifier-status {
+    color: green;
+  }
+
+  .on-text{
+    color: #d42727;
+  }
+  
+  .fan {
+    opacity: 1;
+    transition: opacity 0.5s;
+  }
+  
+  .fan.off {
+    opacity: 0.5;
+  }
+  
+  .lock {
+    opacity: 1;
+    transition: opacity 0.5s;
+  }
+  
+  .lock.off {
+    opacity: 0.5;
+  }
+  
+  .humidifier {
+    opacity: 1;
+    transition: opacity 0.5s;
+  }
+  
+  .humidifier.off {
+    opacity: 0.5;
+  } 
+
+  #temperature-container {
+    width: 500px;
+    height: 180px;
+    position: absolute;
+    top: 60px;
+    left: 40px;
+    
+    background-color: #f2f2f2; /* 将此行添加到将温度折线图容器的背景颜色设置为灰色 */
+    padding: 20px; /* 将此行添加到将温度折线图容器的内边距设置为20像素 */
+    border-radius: 25px; /* 将此行添加到将温度折线图容器的边角设置为5像素的圆角 */
+  }  
+
+  #temperature-chart {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    max-height: 200px;
+    margin-top: -10px;
+   /* border: 1px solid #ccc; /* 添加1像素的灰色边框 */
+   /* border-radius: 5px; /* 添加5像素的圆角 */
+  }
+  
+  #humidity-container {
+    width: 500px;
+    height: 180px;
+    position: absolute;
+    top: 290px;
+    left: 40px;
+
+    
+    background-color: #f2f2f2; /* 将此行添加到将温度折线图容器的背景颜色设置为灰色 */
+    padding: 20px; /* 将此行添加到将温度折线图容器的内边距设置为20像素 */
+    border-radius: 25px; /* 将此行添加到将温度折线图容器的边角设置为5像素的圆角 */
+  }  
+
+  #humidity-chart {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    max-height: 200px;
+    margin-top: -10px;
+  }  
+
+  #environment-container {
+    width: 500px;
+    height: 180px;
+    position: absolute;
+    top: 520px;
+    left: 40px;
+
+    
+    background-color: #f2f2f2; /* 将此行添加到将温度折线图容器的背景颜色设置为灰色 */
+    padding: 20px; /* 将此行添加到将温度折线图容器的内边距设置为20像素 */
+    border-radius: 25px; /* 将此行添加到将温度折线图容器的边角设置为5像素的圆角 */
+  }  
+
+  #environment-chart {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    max-height: 200px;
+    margin-top: -10px;
+  } 
+
+  #data-table {
+    width: 100%;
+    max-width: 300px;
+    margin-top: 20px;
+    border-collapse: collapse;
+    position: absolute; 
+    top: -10px; 
+  }
+  
+  #data-table th,
+  #data-table td {
+    padding: 10px;
+    border: 1px solid #d42727;
+    text-align: center;
+  }
+  
+  #data-table th {
+    background-color: #abdbf7;
+    font-weight: bold;
+  }
+  
